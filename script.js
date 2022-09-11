@@ -41,8 +41,12 @@ function desencriptar(stringDesencriptada){
 
 
 function copiar(){
-    
-    
-    
+    var textoCopiado = document.getElementById("caixaTexto");
+
+    textoCopiado.select();
+    textoCopiado.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(textoCopiado.value);
+        
     alert("*****Mensagem Copiada!*****");  
 }
